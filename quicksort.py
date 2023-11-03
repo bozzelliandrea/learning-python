@@ -28,9 +28,8 @@ def sort(arr):
         return
 
     quick_sort(arr, 0, len(arr) - 1)
+    return arr
 
 
 if __name__ == '__main__':
-    arr = [6, 34, 5, 67, 34, 5, 3455, 6346, 54, 76, 867, 48, 564, 745, 67, 567, 4, 56]
-    sort(arr)
-    print(arr)
+    print(sort([6, 34, 5, 67, 34, 5, 3455, 6346, 54, 76, 867, 48, 564, 745, 67, 567, 4, 56]))
