@@ -1,25 +1,37 @@
+from common.exceptions import InputException
+
+
 def input_read():
-    return [input("First value: "), input("Second value: ")]
+    if a := input("First value: "):
+        a = int(a)
+    else:
+        raise InputException("First value is null")
+
+    if b := input("Second value: "):
+        b = int(b)
+    else:
+        raise InputException("Second value is null")
+    return [a, b]
 
 
 def add():
     i = input_read()
-    return int(i[0]) + int(i[1])
+    return i[0] + i[1]
 
 
 def sub():
     i = input_read()
-    return int(i[0]) - int(i[1])
+    return i[0] - i[1]
 
 
 def div():
     i = input_read()
-    return int(i[0]) / int(i[1])
+    return i[0] / i[1]
 
 
 def multiply():
     i = input_read()
-    return int(i[0]) * int(i[1])
+    return i[0] * i[1]
 
 
 """
